@@ -11,7 +11,15 @@ const AddUser = (props) => {
 
   const addUserHandler = (event) => {
     event.preventDefault();
+    if (userInput.trim().length === 0 || userAge.trim().length === 0) {
+      return;
+    }
+    if (+userAge < 1) {
+      return;
+    }
     console.log(userInput, userAge);
+    setUserInput("");
+    setAgeInput("");
   };
 
   const userNameChangeHandler = (event) => {
