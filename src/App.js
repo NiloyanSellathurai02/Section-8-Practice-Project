@@ -14,10 +14,11 @@ function App() {
     });
   };
   return (
-    <div>
+    // React Fragments zorgen voor cleaner code zodat je geen Div soep krijgt in de HTML file
+    <React.Fragment>
       <AddUser onAddUser={addUserHandler} />
       <UserList users={usersList} />
-    </div>
+    </React.Fragment>
   );
 }
 
